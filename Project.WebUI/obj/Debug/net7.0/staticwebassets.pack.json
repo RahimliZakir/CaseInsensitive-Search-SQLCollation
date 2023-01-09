@@ -1,0 +1,25 @@
+{
+  "Files": [
+    {
+      "Id": "C:\\Users\\User\\Desktop\\Project.Solution\\Project.WebUI\\wwwroot\\libraries\\css\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\libraries\\css\\bootstrap.min.css"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.Project.WebUI.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.build.Project.WebUI.props",
+      "PackagePath": "build\\Project.WebUI.props"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.buildMultiTargeting.Project.WebUI.props",
+      "PackagePath": "buildMultiTargeting\\Project.WebUI.props"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.buildTransitive.Project.WebUI.props",
+      "PackagePath": "buildTransitive\\Project.WebUI.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

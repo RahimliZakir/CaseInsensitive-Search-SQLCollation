@@ -1,0 +1,37 @@
+{
+  "Version": 1,
+  "Hash": "fcXi2fMQsdJ8xnN1vOOdLiIep6paou0Ra9DiRRo1TUA=",
+  "Source": "Project.WebUI",
+  "BasePath": "_content/Project.WebUI",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [
+    {
+      "Name": "Project.WebUI\\wwwroot",
+      "Source": "Project.WebUI",
+      "ContentRoot": "C:\\Users\\User\\Desktop\\Project.Solution\\Project.WebUI\\wwwroot\\",
+      "BasePath": "_content/Project.WebUI",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": [
+    {
+      "Identity": "C:\\Users\\User\\Desktop\\Project.Solution\\Project.WebUI\\wwwroot\\libraries\\css\\bootstrap.min.css",
+      "SourceId": "Project.WebUI",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\User\\Desktop\\Project.Solution\\Project.WebUI\\wwwroot\\",
+      "BasePath": "_content/Project.WebUI",
+      "RelativePath": "libraries/css/bootstrap.min.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\libraries\\css\\bootstrap.min.css"
+    }
+  ]
+}

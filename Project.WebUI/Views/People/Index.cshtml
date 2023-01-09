@@ -1,0 +1,110 @@
+﻿@model PersonViewModel
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+    <link rel="stylesheet" href="~/libraries/css/bootstrap.min.css" />
+    <style>
+        .search-side {
+            background-color: grey;
+            padding: 1.25%;
+        }
+
+        input::-webkit-outer-spin-button,
+        input::-webkit-inner-spin-button {
+            -webkit-appearance: none !important;
+            margin: 0 !important;
+        }
+
+        input[type=number] {
+            -moz-appearance: textfield !important;
+        }
+    </style>
+</head>
+<body>
+    <div class="root">
+        <div class="search-side">
+            @using (Html.BeginForm("Index", "People", FormMethod.Post))
+            {
+                <div class="row">
+                    <div class="col-3 mb-2">
+                        <input class="form-control" asp-for="Name" placeholder="Name" />
+                    </div>
+                    <div class="col-3 mb-2">
+                        <input class="form-control" asp-for="Surname" placeholder="Surname" />
+                    </div>
+                    <div class="col-3 mb-2">
+                        <input class="form-control" asp-for="Age" placeholder="Age" />
+                    </div>
+                    <div class="col-3 mb-2">
+                        <input class="form-control" asp-for="Email" placeholder="Email" />
+                    </div>
+                    <div class="col-3 mb-2">
+                        <input class="form-control" asp-for="Citizenship" placeholder="Citizenship" />
+                    </div>
+                    <div class="col-3 mb-2">
+                        <button class="btn btn-primary">Search</button>
+                    </div>
+                </div>
+            }
+        </div>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Name)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Surname)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Age)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Email)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Citizenship)
+                    </th>
+                    <th>
+                        Created Date
+                    </th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (Person item in Model.People)
+                {
+                    <tr>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Name)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Surname)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Age)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Email)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Citizenship)
+                        </td>
+                        <td>
+                            @item.CreatedDate.ToString("dd.MM.yyyy HH:mm:ss")
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>
