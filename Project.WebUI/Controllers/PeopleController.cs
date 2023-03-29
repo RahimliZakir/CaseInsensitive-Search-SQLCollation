@@ -22,19 +22,19 @@ namespace Project.WebUI.Controllers
 
             IQueryable<Person> query = db.People.AsQueryable();
 
-            // 1. First Way - Insensitive Search (With "Like" method).
+            // 1. First Way - Case-Insensitive Search (With "Like" method).
             if (!string.IsNullOrWhiteSpace(request.Name))
                 query = query.Where(q => EF.Functions.Like(q.Name, $"{request.Name}%"));
 
-            // 2. Second Way - Insensitive Search (With "StartsWith" method & "StringComparison" enum).
+            // 2. Second Way - Case-Insensitive Search (With "StartsWith" method & "StringComparison" enum).
             if (!string.IsNullOrWhiteSpace(request.Surname))
                 query = query.Where(q => q.Surname.StartsWith(request.Surname, StringComparison.OrdinalIgnoreCase));
 
-            // 3. Third Way - Insensitive Search (With "IndexOf" method & "StringComparison" enum).
+            // 3. Third Way - Case-Insensitive Search (With "IndexOf" method & "StringComparison" enum).
             if (!string.IsNullOrWhiteSpace(request.Email))
                 query = query.Where(q => q.Email.IndexOf(request.Email, 0, StringComparison.OrdinalIgnoreCase) != -1);
 
-            // 4. Fourth Way - Insensitive Search (With "UseCollation" method on DbContext file).
+            // 4. Fourth Way - Case-Insensitive Search (With "UseCollation" method on DbContext file).
             if (!string.IsNullOrWhiteSpace(request.Citizenship))
                 //query = query.Where(q => q.Citizenship.StartsWith(request.Citizenship));
                 // 5. Bonus (Explicit Collation)
